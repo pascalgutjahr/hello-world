@@ -15,15 +15,16 @@
 \usepackage{bookmark}
 %Einstellungen hier, z.b. Fonts
 
+\newcommand{\be}{\begin{equation}} %Kurzbefehl für \begin{equation}
+\newcommand{\ee}{\end{equation}} %Kurzbefehl für \end{equation}
+%Befehle eingefügt um Zeichen zu sparen
+
+
 \begin{document}
 \section{Biot-Savart-Gesetz}
-Das Magnetfeld
-\vec{B}
-am Ort
-\vec{r}
-eines stromdurchlossenen Leiters
- ergibt sich zu
-  \begin{equation}
+Das Magnetfeld $\vec{B}$ am Ort $\vec{r}$
+eines stromdurchlossenen Leiters ergibt sich zu
+ \be
     \vec{B}
     \vec{(r)}
     =
@@ -31,6 +32,8 @@ eines stromdurchlossenen Leiters
     \int_V
     \vec{j}
     \vec{(x')}
-
-  \end{equation}
+    \times \frac{\vec{r}-\vec{r'}}{\lvert \vec{r} - \vec{r'}\rvert^3} dV'.
+      \ee
+  Hierbei bezeichnet $\vec{j}$ die Stromdichte am Ort $\vec{r'}$
+  und ${\mu_0}$ die magnetische Feldkonstante.
 \end{document}
