@@ -16,7 +16,13 @@
 ]{unicode-math}
 
 \usepackage{mathtools} %Erweiterungen für amsmath
-\usepackage{unicode-math}
+\usepackage[
+  math-style=ISO,
+  bold-style=ISO,
+  sans-style=italic,
+  nabla=upright,
+  partial=upright,
+]{unicode-math} %optionale müssen ergänzt werden
 %Noch mehr Pakete
 \setmathfont{Latin Modern Math}
 
@@ -108,9 +114,16 @@ schreiben.
 Ebene Welle:
 \be
 \nabla^2 A -\frac{1}{c^2}\frac{\symup{\partial^2}}{\symup{\partial}t^2}A=0
+\label{eqn:16}
 \ee
+eine Lösung:
+\be
+A=A_0\exp(\bigl(\symup{i}\bigl(\symbf{k} \symbf{x}-\omega t\bigr)\bigr)) \label{eqn:17}
+\ee
+Gruppen- und Phasengeschwindigkeit:
+\begin{align}
+  v_{Gr}&=\frac{\symup{\partial}\omega}{\symup{\partial}k} &
+  v_{Ph}&=\frac{\omega}{k}
+\end{align}
 \end{document}
-
-
-
 %das hast du sehr gut gemacht!
