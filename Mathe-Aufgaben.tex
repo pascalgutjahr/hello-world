@@ -28,11 +28,11 @@ eines stromdurchlossenen Leiters ergibt sich zu
     \vec{B}
     (\vec{r})
     =
-    \frac{\mu_0}{4\symup{\pi}}
+    \frac{\mu_o}{4\pi}
     \int_V
     \vec{\jmath}
-    (\vec{r}')
-    \times \frac{\vec{r}-\vec{r}\lvert \vec{r} - \vec{r'}\rvert^3} dV'.
+    \vec{(x')}
+    \times \frac{\vec{r}-\vec{r'}}{\lvert \vec{r} - \vec{r'}\rvert^3} dV'.
       \ee
   Hierbei bezeichnet $\vec{j}$ die Stromdichte am Ort $\vec{r'}$
   und ${\mu_0}$ die magnetische Feldkonstante.
@@ -40,10 +40,63 @@ eines stromdurchlossenen Leiters ergibt sich zu
   \section{Fehlerfortpflanzung}
   \begin{equation}
     \sigma_k =
-    \sqrt{\sum_{i=}^N \frac{\delta f}{\delta x_i}}}
+    \sqrt{\sum_{i=1}^N
+    \Biggl(\frac{\partial{f}}{\partial{x_i}} \sigma_i \Biggr)^2}
   \end{equation}
+  \section{Maxwell-Gleichungen}
 
+  \begin{align}
+    \nabla\cdot\vec{E} &= \frac{\rho}{\epsilon_0}  &  \nabla\cdot\vec{B} &= 0 \\
+    \nabla\times\vec{E} &= -\partial_t\vec{B} & \nabla\times\vec{B} &= \mu_0\vec{\jmath}
+    +\mu_0\epsilon_0\partial_t\vec{E}
+\end{align}
+\section{Wellengleichung}
+Im Vakuum gelten $\rho=0$ und $\vec{\jmath}=0$, womit sich die Maxwellgleichungen
+zu
+\begin{align}
+  \nabla\cdot\vec{E}&=0 \label{eqn:max1} \\
+  \nabla\cdot\vec{B}&=0 \label{eqn:max2} \\
+  \nabla\times\vec{E}&=-\partial_t\vec{B} \label{eqn:max3} \\
+  \nabla\times\vec{B}&=\mu_0\epsilon_0\partial_t\vec{E} \label{eqn:max4}
+\end{align}
+reduzieren. Nach erneuter Rotation auf \eqref{eqn:max3} ergibt sich
+\be
+\nabla\times\bigl(\nabla\times\vec{E}\bigr)=\nabla\times\bigl(-\partial_t\vec{B}\bigr)
+\label{eqn:rot}
+\ee
+Nach dem Satz von Schwarz lassen sich die partiellen Ableitungen vertauschen, was zu
+\be
+\nabla\times\bigl(\nabla\times\vec{E}\bigr)=-\partial_t\bigl(\nabla\times\vec{B}\bigr)
+\label{eqn:schwarz}
+\ee
+führt. Wir setzen auf der rechten Seite \eqref{eqn:max4} ein:
+\be
+\nabla\times\bigl(\nabla\vec{E}\bigr)=-\mu_0\epsilon_0\symup{\partial_t^2}\vec{E}\label{eqn:ein}
+\ee
+aus der linken Seite wird mit
+\be
+\nabla\times\bigl(\nabla\vec{E}\bigr)=\nabla\cdot\bigl(\nabla\vec{E}\bigr)-\Delta
+\vec{E} \label{eqn:2}
+\ee
+\newpage
+und ausnutzen von \eqref{eqn:max1}
+\be
+-\Delta\vec{E}=-\mu_0\epsilon_0\symup{\partial_t^2}\vec{E}.
+\label{eqn:13}
+\ee
+Dies ist die Wellengleichung für das elektrische Feld,
+in der sich die Lichgeschwindigkeit
+\be
+c=\frac{1}{\sqrt{\mu_0\epsilon_0}}\label{eqn:14}
+\ee
+identifizieren lässt. Damit können wir
+\be
+\Bigl(\Delta-\frac{1}{c^2}\frac{\symup{\partial^2}}{\symup{\partial}t^2}\Bigr)
+\vec{E}=0 \label{eqn:15}
+\ee
+schreiben.
 \end{document}
+
 
 
 %das hast du sehr gut gemacht!
