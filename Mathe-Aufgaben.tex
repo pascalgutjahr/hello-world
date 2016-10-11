@@ -30,7 +30,7 @@ eines stromdurchlossenen Leiters ergibt sich zu
     =
     \frac{\mu_o}{4\pi}
     \int_V
-    \vec{j}
+    \vec{\jmath}
     \vec{(x')}
     \times \frac{\vec{r}-\vec{r'}}{\lvert \vec{r} - \vec{r'}\rvert^3} dV'.
       \ee
@@ -40,8 +40,8 @@ eines stromdurchlossenen Leiters ergibt sich zu
   \section{Fehlerfortpflanzung}
   \begin{equation}
     \sigma_k =
-    \sqrt{\sum_{i=}^N}
-    \frac{\delta f}{\delta y_i}
+    \sqrt{\sum_{i=1}^N
+    \Biggl(\frac{\partial{f}}{\partial{x_i}} \sigma_i \Biggr)^2}
   \end{equation}
 
 \end{document}
