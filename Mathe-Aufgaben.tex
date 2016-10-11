@@ -43,7 +43,27 @@ eines stromdurchlossenen Leiters ergibt sich zu
     \sqrt{\sum_{i=1}^N
     \Biggl(\frac{\partial{f}}{\partial{x_i}} \sigma_i \Biggr)^2}
   \end{equation}
+  \section{Maxwell-Gleichungen}
 
+  \begin{align}
+    \nabla\cdot\vec{E} &= \frac{\rho}{\epsilon_0}  &  \nabla\cdot\vec{B} &= 0 \\
+    \nabla\times\vec{E} &= -\partial_t\vec{B} & \nabla\times\vec{B} &= \mu_0\vec{\jmath}
+    +\mu_0\epsilon_0\partial_t\vec{E}
+\end{align}
+\section{Wellengleichung}
+Im Vakuum gelten $\rho=0$ und $\vec{jmath}=0$, womit sich die Maxwellgleichungen
+zu
+\begin{align}
+  \nabla\cdot\vec{E}&=0 \label{eqn:max1} \\
+  \nabla\cdot\vec{B}&=0 \label{eqn:max2} \\
+  \nabla\times\vec{E}&=-\partial_t\vec{B} \label{eqn:max3} \\
+  \nabla\times\vec{B}&=\mu_0\epsilon_0\partial_t\vec{E} \label{eqn:max4}
+\end{align}
+reduzieren. Nach erneuter Rotation auf \eqref{eqn:max3} ergibt sich
+\be
+\nabla\times\bigl(\nabla\times\vec{E}\bigr)=-\partial_t\bigl(\nabla\times\vec{B}\bigr)
+\label{eqn:rot}
+\ee
 \end{document}
 
 
