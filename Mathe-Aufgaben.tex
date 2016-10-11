@@ -51,7 +51,7 @@ eines stromdurchlossenen Leiters ergibt sich zu
     +\mu_0\epsilon_0\partial_t\vec{E}
 \end{align}
 \section{Wellengleichung}
-Im Vakuum gelten $\rho=0$ und $\vec{jmath}=0$, womit sich die Maxwellgleichungen
+Im Vakuum gelten $\rho=0$ und $\vec{\jmath}=0$, womit sich die Maxwellgleichungen
 zu
 \begin{align}
   \nabla\cdot\vec{E}&=0 \label{eqn:max1} \\
@@ -69,7 +69,32 @@ Nach dem Satz von Schwarz lassen sich die partiellen Ableitungen vertauschen, wa
 \nabla\times\bigl(\nabla\times\vec{E}\bigr)=-\partial_t\bigl(\nabla\times\vec{B}\bigr)
 \label{eqn:schwarz}
 \ee
-führt.
+führt. Wir setzen auf der rechten Seite \eqref{eqn:max4} ein:
+\be
+\nabla\times\bigl(\nabla\vec{E}\bigr)=-\mu_0\epsilon_0\symup{\partial_t^2}\vec{E}\label{eqn:ein}
+\ee
+aus der linken Seite wird mit
+\be
+\nabla\times\bigl(\nabla\vec{E}\bigr)=\nabla\cdot\bigl(\nabla\vec{E}\bigr)-\Delta
+\vec{E} \label{eqn:2}
+\ee
+\newpage
+und ausnutzen von \eqref{eqn:max1}
+\be
+-\Delta\vec{E}=-\mu_0\epsilon_0\symup{\partial_t^2}\vec{E}.
+\label{eqn:13}
+\ee
+Dies ist die Wellengleichung für das elektrische Feld,
+in der sich die Lichgeschwindigkeit
+\be
+c=\frac{1}{\sqrt{\mu_0\epsilon_0}}\label{eqn:14}
+\ee
+identifizieren lässt. Damit können wir
+\be
+\Bigl(\Delta-\frac{1}{c^2}\frac{\symup{\partial^2}}{\symup{\partial}t^2}\Bigr)
+\vec{E}=0 \label{eqn:15}
+\ee
+schreiben.
 \end{document}
 
 
