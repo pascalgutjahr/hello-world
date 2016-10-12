@@ -3,12 +3,38 @@
 
 \begin{document}
 
+\section{Aufgabe, ein Plot}
   \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{plots/plot1.pdf}
     \caption{1. Grafik}
     \label{fig:1}
   \end{figure}
+  \newpage
+
+\section{ Aufgabe, zwei Plots}
+
+In \ref{fig:hihi} sieht man zwei schöne Graphen,
+in \ref{fig:huhu} sieht man zwei hässliche Graphen
+
+\begin{figure}
+  \centering
+  \begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[height=4cm]{plots/plot2.pdf}
+    \caption{hihi}
+    \label{fig:hihi}
+  \end{subfigure}
+  \begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[height= 4cm]{plots/plot3.pdf}
+    \caption{huhuhuhuh}
+    \label{fig:huhu}
+  \end{subfigure}
+  \caption{Abbildung \subref{fig:hihi}: schöne Abbildung;
+  Abbildung \subref{fig:huhu}: nicht so schön}
+  \label{fig:logos}
+\end{figure}
 
 
 \end{document}
