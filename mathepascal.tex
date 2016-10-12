@@ -68,7 +68,7 @@ Maxwellgleichungen zu
 \nabla\times\vec{E} &= -\partial_t\vec{B} \label{eqn:max3} \\
 \nabla\times\vec{B} &= \mu_0\epsilon_0\partial_t{\vec{E}} \label{eqn:max4}
  \end{align}
- reduzieren. Nach erneuter Rotation auf \eqref{max3} ergibt sich
+ reduzieren. Nach erneuter Rotation auf \eqref{eqn:max3} ergibt sich
  \begin{align}
    \nabla\times(\nabla\times\vec{E}) = \nabla\times(-\partial_t\vec{B})
    \label{eqn:9}
@@ -79,7 +79,7 @@ Maxwellgleichungen zu
    \nabla\times(\nabla\times\vec{E}) = -\partial_t(\nabla\times\vec{B})
    \label{eqn:10}
  \end{align}
- führt. Wir setzen auf der rechten Seite \eqref{max4} ein:
+ führt. Wir setzen auf der rechten Seite \eqref{eqn:max4} ein:
  \begin{align}
    \nabla\times(\nabla\vec{E})=-\mu_0\epsilon_0\partial_t^2\vec{E}
    \label{eqn:11}
@@ -131,6 +131,32 @@ Gruppen- und Phasengeschwindigkeit:
   Q_{kl}\frac{r_k r_l}{r^5} + \cdot\cdot\cdot \Biggr),
 \end{equation} \\
 wobei
+\begin{equation*}
+  Q_{kl}= \sum_{i=1}^n q_i (3r_{ik} r_{il} - r_i^2 \delta_{kl})
+\end{equation*}
+\section{Jacobi-Matrix}
 
+\begin{equation}
+  \symbf{J}=
+  \begin{pmatrix}
+    \frac{\partial f_1}{\partial x_1} & \cdots & \frac{f_1}{\partial x_n} \\
+    \vdots & \ddots & \vdots \\
+    \frac{\partial f_m} {\partial x_1} & \cdots & \frac{\partial f_m}{\partial x_n}
+  \end{pmatrix}
+\end{equation}
+
+\section{Harmonischer Oszillator}
+\begin{equation}
+  \ddot{x} + 2\gamma\dot{x} +\omega_0^2x= 0
+\end{equation}
+Reelle Lösung:
+\begin{equation}
+  x(t)= e^{-\gamma t}
+(A\cos{(\omega t)} + B\sin{(\omega t)})
+\end{equation}
+mit
+\begin{equation}
+  \omega = \sqrt{\omega_0^2-\gamma^2}.
+\end{equation}
 
 \end{document}
