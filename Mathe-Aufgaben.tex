@@ -50,7 +50,7 @@ eines stromdurchlossenen Leiters ergibt sich zu
   \begin{equation}
     \sigma_k =
     \sqrt{\sum_{i=1}^N
-    \Biggl(\frac{\partial{f}}{\partial{x_i}} \sigma_i \Biggr)^2}
+    \Biggl(\frac{\partial f}{\partial{x_i}} \sigma_i \Biggr)^2}
   \end{equation}
   \section{Maxwell-Gleichungen}
 
@@ -139,7 +139,18 @@ wobei
    q_i \bigl(3r_ik r_il -r^2_i \delta_{kl} \bigr)%Argument der Summe
 \end{equation*}
 \section{Jacobi-Matrix}
-
+\begin{equation}
+  \symbf{J}=
+  \begin{pmatrix}
+    \frac{\partial f_1}{\partial x_1} & \cdots & \frac{\partial f_1}{\partial x_n}
+    \\ %Zeilenumbruch
+    \vdots & %vertikale punkte
+    \ddots & %Diagonale punkte
+    \vdots \\
+    \frac{\partial f_m}{\partial x_1} & \cdots %Horizontale Punkte
+    & \frac{\partial f_m}{\partial x_n}
+  \end{pmatrix}
+\end{equation}
 \end{document}
 
 %das hast du sehr gut gemacht!
