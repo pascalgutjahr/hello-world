@@ -122,12 +122,14 @@ Gruppen- und Phasengeschwindigkeit:
 \be
 \symup{\symbf{\phi}}\bigl(\symbf{r}\bigr)=\frac{1}{4\pi\epsilon_0}
 \biggl(\frac{Q}{r}+\frac{\symbf{r\cdot p}}{r^3}+\frac{1}{2}
-\sum_{k,l}Q_kl \frac{r_k r_l}{r^5}+...\biggr) \label{eqn:19},
+\sum_{k,l}Q_{k l} \frac{r_k r_l}{r^5}+...\biggr) \label{eqn:19},
 \ee
-wobei \\
-\begin{center}
-  $Q_kl=\sum_{i=1}^n q_i \bigl(3r_ik r_il -r^2_i \delta_kl \bigr)$
-\end{center}
+wobei
+\begin{equation*} % * steht dafür, dass es nicht nummeriert wird
+  Q_{k l}=
+  \sum_{i=1}^N % Summe
+   q_i \bigl(3r_ik r_il -r^2_i \delta_{kl} \bigr)%Argument der Summe
+\end{equation*}
 \section{Jacobi-Matrix}
 \end{document}
 
