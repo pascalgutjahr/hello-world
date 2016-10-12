@@ -1,0 +1,136 @@
+\documentclass{scrartcl}
+
+\usepackage[aux]{rerunfilecheck}
+
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+\usepackage{fontspec}
+
+\usepackage[
+  math-style=ISO,
+  bold-style=ISO,
+  sans-style=italic,
+  nabla=upright,
+  partial=upright,
+]{unicode-math}
+
+\usepackage[unicode]{hyperref}
+\usepackage{bookmark}
+%Einstellungen hier, z.b. Fonts
+
+\newcommand{\be}{\begin{equation}} %Kurzbefehl für \begin{equation}
+\newcommand{\ee}{\end{equation}} %Kurzbefehl für \end{equation}
+%Befehle eingefügt um Zeichen zu sparen
+
+
+
+\begin{document}
+
+\section{Biot-Savart}
+  Das Magnetfeld $\vec{B}$ am Ort $\vec{r}$ eines
+  stromdurchflossenen Leiters
+  ergibt sich zu
+\begin{equation}
+  \vec{B}(\vec{r})= \frac{\mu_0}% Zähler
+  {4\symup{\pi}}% Nenner
+  \int_V \vec{\jmath}(\vec{r}') \times \frac{\vec{r}-\vec{r}'}
+  {\lvert \vec{r} - \vec{r}'\rvert^3}
+  \symup{d}V'.
+\end{equation}
+Hierbei bezeichnet $\vec{\jmath}$ die Stromdichte am Ort $\vec{r}'$
+ und $\mu_0$ die magnetische Feldkonstante.
+
+ \section{Fehlerfortpflanzung}
+ \begin{equation}
+\sigma_k = \sqrt{\sum_{i=1}^N \Biggl(\frac{\partial{f}}{\partial{x_i}}
+\sigma_i\Biggr)^2}
+ \end{equation}
+
+ \section{Maxwell-Gleichungen}
+ \begin{align}
+\nabla\cdot\vec{E} &= \frac{\rho}{\epsilon_0} &
+\nabla\cdot\vec{B} &= 0 \\ % Zeilenumbruch
+\nabla\times\vec{E} &= -\partial_t{\vec{B}} &
+\nabla\times\vec{B} &= \mu_0\vec{\jmath} + \mu_0\epsilon_0\partial_t{\vec{E}}
+ \end{align}
+
+ \section{Wellengleichung}
+Im Vakuum gelten $\rho=0$ und $\vec{\jmath}=0$, womit sich die
+Maxwellgleichungen zu
+ \begin{align}
+\nabla\cdot\vec{E} &= 0     \label{eqn:max1}\\
+\nabla\cdot\vec{B} &= 0   \label{eqn:max2}  \\
+\nabla\times\vec{E} &= -\partial_t\vec{B} \label{eqn:max3} \\
+\nabla\times\vec{B} &= \mu_0\epsilon_0\partial_t{\vec{E}} \label{eqn:max4}
+ \end{align}
+ reduzieren. Nach erneuter Rotation auf \eqref{max3} ergibt sich
+ \begin{align}
+   \nabla\times(\nabla\times\vec{E}) = \nabla\times(-\partial_t\vec{B})
+   \label{eqn:9}
+ \end{align}
+ Nach dem Satz von Schwarz lassen sich die partiellen Ableitungen
+ vertauschen, was zu
+ \begin{align}
+   \nabla\times(\nabla\times\vec{E}) = -\partial_t(\nabla\times\vec{B})
+   \label{eqn:10}
+ \end{align}
+ führt. Wir setzen auf der rechten Seite \eqref{max4} ein:
+ \begin{align}
+   \nabla\times(\nabla\vec{E})=-\mu_0\epsilon_0\partial_t^2\vec{E}
+   \label{eqn:11}
+ \end{align}
+ aus der linken Seite wird mit
+ \begin{align}
+ \nabla\times(\nabla\vec{E})= \nabla\cdot(\nabla\vec{E})- \Delta\vec{E}
+ \label{eqn:12}
+ \end{align}
+ und ausnutzen von \eqref{max1}
+ \begin{align}
+   -\Delta\vec{E}=-\mu_0\epsilon_0\partial_t^2\vec{E}
+   \label{eqn:13}
+ \end{align}
+ Dies ist die Wellengleichung für das elekrtische Feld,
+ in der sich die Lichtgeschwindigkeit
+ \begin{align}
+ c=\frac{1}{\sqrt{\mu_0\epsilon_0}} \label{eqn:14}
+\end{align}
+identifizieren lässt. Dazu können wir
+\begin{align}
+  \biggl(\Delta-\frac{1}{c^2}\frac{\partial^2}{\partial_t^2}\biggr)\vec{E}=0
+\end{align}
+\label{eqn:15}
+schreiben.
+
+\section{Wellengleichung}
+Ebene Welle:
+\begin{align}
+  \nabla^2 A - \frac{1}{c^2}\frac{\partial^2}{\partial t^2}A= 0
+\end{align}
+eine Lösung:
+
+\begin{equation}
+  A=A_0\exp (i({\symbf{kx}-\omega t}))  %symbf für fett schreiben
+\end{equation}
+
+Gruppen- und Phasengeschwindigkeit:
+
+\begin{align}
+  v_{Gr} &=\frac{\partial\omega}{\partial k} &
+  v_{Ph} &= \frac{\omega}{k}
+\end{align}
+
+\section{Multipolentwicklung}
+\begin{equation}
+  \Phi(r) = \frac{1}{4\symup{pi}\epsilon_0}\Biggl(\frac{Q}{r} +
+  \frac{\symbf{r\cdot p}} {r^3} + \frac{1}{2} \sum_{k,l}
+  Q_{kl}\frac{r_k r_l}{r^5} + \cdot\cdot\cdot \Biggr),
+\end{equation} \\
+wobei
+
+
+\end{document}
