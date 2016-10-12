@@ -2,6 +2,7 @@
 \input{mathead.tex}
 
 \begin{document}
+\section{Aufgabe 1}
 In \ref{fig:plt1} sieht man einen schönen Plot.
 \begin{figure}
   \centering
@@ -9,4 +10,31 @@ In \ref{fig:plt1} sieht man einen schönen Plot.
   \caption{ein schöner Plot.}
   \label{fig:plt1}
 \end{figure}
+\\
+Hier kann man noch einiges über den gezeigten Plot erzählen,
+wenn man genug zu erzählen hat.
+\newpage
+\section{Aufgabe 2}
+In \ref{fig:2} sieht man 2 schöne plots. Abbildung \ref{fig:2a}
+ist der schönste aller plots.
+\begin{figure}
+  \centering
+  \begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/plot2.pdf}
+    \caption{Der schönste Plot.}
+    \label{fig:2a}
+  \end{subfigure}
+  \begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/plot3.pdf}
+    \caption{schöner Plot.}
+    \label{fig:2b}
+  \end{subfigure}
+  \caption{Zwei Plots, Abbildung \subref{fig:2a}: schönster Plot.}
+  \label{fig:2}
+\end{figure}
+\\
+Auch hierzu könnte man mehr erzählen, wenn man lustig ist.
+
 \end{document}
