@@ -1,23 +1,15 @@
-\documentclass{scrartcl}
+\documentclass {scrartcl}
 
 \usepackage[aux]{rerunfilecheck}
-
 \usepackage{polyglossia}
 \setmainlanguage{german}
-
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{mathtools}
-
+\usepackage{amsmath} %unverzichtbare Mathe-Befehle
+\usepackage{amssymb} %viele Mathe-Symbole
 \usepackage{fontspec}
-
-\usepackage[
-  math-style=ISO,
-  bold-style=ISO,
-  sans-style=italic,
-  nabla=upright,
-  partial=upright,
-]{unicode-math}
+\usepackage{mathtools} %Erweiterungen für amsmath
+\usepackage{unicode-math}
+%Noch mehr Pakete
+\setmathfont{Latin Modern Math}
 
 \usepackage[unicode]{hyperref}
 \usepackage{bookmark}
