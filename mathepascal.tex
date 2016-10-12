@@ -63,12 +63,48 @@ Hierbei bezeichnet $\vec{\jmath}$ die Stromdichte am Ort $\vec{r}'$
 Im Vakuum gelten $\rho=0$ und $\vec{\jmath}=0$, womit sich die
 Maxwellgleichungen zu
  \begin{align}
-\nabla\cdot\vec{E} &= 0 \\
-\nabla\cdot\vec{B} &= 0 \\
-\nabla\times\vec{E} &= -\partial_t\vec{B}\\
-\nabla\times\vec{B} &= \mu_0\epsilon_0\partial_t{\vec{E}}
+\nabla\cdot\vec{E} &= 0     \label{eqn:max1}\\
+\nabla\cdot\vec{B} &= 0   \label{eqn:max2}  \\
+\nabla\times\vec{E} &= -\partial_t\vec{B} \label{eqn:max3} \\
+\nabla\times\vec{B} &= \mu_0\epsilon_0\partial_t{\vec{E}} \label{eqn:max4}
  \end{align}
-
+ reduzieren. Nach erneuter Rotation auf \eqref{max3} ergibt sich
+ \begin{align}
+   \nabla\times(\nabla\times\vec{E}) = \nabla\times(-\partial_t\vec{B})
+   \label{eqn:9}
+ \end{align}
+ Nach dem Satz von Schwarz lassen sich die partiellen Ableitungen
+ vertauschen, was zu
+ \begin{align}
+   \nabla\times(\nabla\times\vec{E}) = -\partial_t(\nabla\times\vec{B})
+   \label{eqn:10}
+ \end{align}
+ führt. Wir setzen auf der rechten Seite \eqref{max4} ein:
+ \begin{align}
+   \nabla\times(\nabla\vec{E})=-\mu_0\epsilon_0\partial_t^2\vec{E}
+   \label{eqn:11}
+ \end{align}
+ aus der linken Seite wird mit
+ \begin{align}
+ \nabla\times(\nabla\vec{E})= \nabla\cdot(\nabla\vec{E})- \Delta\vec{E}
+ \label{eqn:12}
+ \end{align}
+ und ausnutzen von \eqref{max1}
+ \begin{align}
+   -\Delta\vec{E}=-\mu_0\epsilon_0\partial_t^2\vec{E}
+   \label{eqn:13}
+ \end{align}
+ Dies ist die Wellengleichung für das elekrtische Feld,
+ in der sich die Lichtgeschwindigkeit
+ \begin{align}
+ c=\frac{1}{\sqrt{\mu_0\epsilon_0}} \label{eqn:14}
+\end{align}
+identifizieren lässt. Dazu können wir
+\begin{align}
+  \biggl(\Delta-\frac{1}{c^2}\frac{\partial^2}{\partial_t^2}\biggr)\vec{E}=0
+\end{align}
+\label{eqn:15}
+schreiben.
 
 
 \end{document}
