@@ -6,8 +6,9 @@
     \centering
     \caption{eine schöne Tabelle}
     \label{tab:tab}
-    \sisetup{table-format=1.2}
-    \begin{tabular}{c c c c c c c c c} %Ausrichtung pro Spalte(5)
+  % \sisetup{table-format=1.2} dies verwendet man, wenn man nicht alle Spalten einzeln einstellen möchte 
+    \begin{tabular}{S[table-format=3.0] S[table-format=2.3] S[table-format=2.2] S[table-format=3.1] S[table-format=2.2] S[table-format=3.3] S[table-format=3.2] S[table-format=3.1] S[table-format=2.2]} %Ausrichtung pro Spalte
+      %table-format=2.4 steht für 2 Zahlen vor dem Komma und 4 Zahlen nach dem Komma, in der jeweiligen Spalte(Maximalwerte)
       \toprule
       & \multicolumn{4}{c}{Messung 1}
       &\multicolumn{4}{c}{Messung 2} \\
