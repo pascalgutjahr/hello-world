@@ -1,5 +1,16 @@
-\input{matheader.tex}
+\input{mathead.tex}
 \begin{document}
-\num{168456} %Zahlen mit automatischer 3er-Gruppe
+\num{168456} \\ %Zahlen mit automatischer 3er-Gruppe
+\num{300e8} \\ %Zahl mit Zehnerpotenz
+\num{1,5 +- 0,1} \\ %Angabe von Fehlern
+\si{\meter\per\second} \\
+\si[per-mode=fraction]{\meter\per\second} \\ %SI-Einheit als Bruch
+\si[per-mode=reciprocal]{\gram\per\cubic\meter} \\ %reziproke Anzeige
+\si{\milli\second} Millisekunde \\
+\si{\meter\second} Meter mal Sekunde \\
+\si[inter-unit-product=\cdot]{\meter\second} Meter mal Sekunde
+% trennt zwei "unpassende Einheiten mit einem cdot"
+\\
+\SI{5}{\percent} %SI für Zalen mit Einheit
 
 \end{document}
