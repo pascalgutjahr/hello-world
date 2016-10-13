@@ -1,0 +1,79 @@
+\documentclass[
+  captions=tableheading,
+]{scrartcl}
+
+\usepackage{scrhack}
+
+\usepackage[aux]{rerunfilecheck}
+
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+\usepackage{fontspec}
+
+\usepackage[
+  math-style=ISO,
+  bold-style=ISO,
+  sans-style=italic,
+  nabla=upright,
+  partial=upright,
+]{unicode-math}
+
+\usepackage{float}
+\floatplacement{figure}{htbp}
+\floatplacement{table}{htbp}
+\usepackage[
+  section,
+  below,
+]{placeins}
+
+\usepackage[unicode]{hyperref}
+\usepackage{bookmark}
+
+\begin{document}
+
+\section{Theorie} \label{sec:theorie}
+
+Es gilt
+\begin{equation}
+  E = mc^2 .\label{eqn:1}\\
+\end{equation}
+Einstein beschreibt mit seiner Formel \eqref{eqn:1} den Zusammenhang zwischen Masse und Energie.
+
+\section{Aufbau und Durchführung}
+
+\begin{figure}
+  \centering
+  Ghostfigure
+  \caption{Ohne Bild}
+  \label{fig:ghost}
+\end{figure}
+Abbildung \ref{fig:ghost} enthält noch kein Bild.
+%eqref bei euqtion, sonst nur ref
+
+\section{Auswertung}
+
+\subsection{Auswertungsteil I}
+
+\begin{table}
+  \centering
+  \caption{Ergebnisse}
+  \label{tab:fehlt}
+  Hier fehlt was ;).
+\end{table}
+In Tabelle \ref{tab:fehlt} befinden sich die Ergebnisse der Auswertung.
+
+\subsection{Auswertungsteil II} \label{sec:aus2}
+
+Hier steht auch noch was.
+
+\section{Diskussion}
+
+Auch der Wert aus Kapitel \ref{sec:aus2} stimmt mit
+dem Theoriewert aus Kapitel \ref{sec:theorie} überein.
+
+\end{document}

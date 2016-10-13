@@ -1,0 +1,45 @@
+\documentclass[bibliography=totoc]{scrartcl}
+
+\usepackage[aux]{rerunfilecheck}
+
+\usepackage{polyglossia}
+
+
+\setmainlanguage{german}
+
+\usepackage{fontspec}
+
+\usepackage[
+  style=alphabetic,
+]{biblatex}
+\addbibresource{lit.bib}  %nach polyglossia
+
+\usepackage[unicode]{hyperref}
+\usepackage{bookmark}
+
+\begin{document}
+
+\section{Theorie}
+
+Physik macht Spaß \cite[1--3]{deGennes}
+
+\section{Aufbau und Durchführung}
+
+informatik ist scheiße \cite[10]{magnet}
+
+\section{Diskussion}
+
+das wird hier ganz klar bestätigt \cite[20--21]{kent}
+
+dies sagt auch Martin\cite[5]{Martin}
+
+\printbibliography
+
+\end{document}
+
+%um das Literaturverzeichnis nun korrekt anzuzeigen,
+%sind folgende Befehle notwendig:
+%lualatex biblatex.tex
+%biber biblatex.bcf
+%lualatex biblatex.tex
+%das dies 3 Befehle sind, bietet sich hier ein Makefile an!

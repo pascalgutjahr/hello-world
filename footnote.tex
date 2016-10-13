@@ -1,0 +1,44 @@
+\documentclass[
+  captions=tableheading,
+  bibliography=totoc,
+]{scrartcl}
+
+\usepackage{scrhack}
+
+\usepackage[aux]{rerunfilecheck}
+
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+\usepackage{fontspec}
+
+\usepackage[
+  math-style=ISO,
+  bold-style=ISO,
+  sans-style=italic,
+  nabla=upright,
+  partial=upright,
+]{unicode-math}
+
+\usepackage{float}
+\floatplacement{figure}{htbp}
+\floatplacement{table}{htbp}
+\usepackage[
+  section,
+  below,
+]{placeins}
+
+\usepackage[unicode]{hyperref}
+\usepackage{bookmark}
+
+\begin{document}
+
+  hallo\footnote{bibel}
+  so erstellt man wunderschön und super leicht Fußnoten\footnote{pascal} \\
+  hier gibt es jetzt noch die dritte Fußnote\footnote{happy}
+
+\end{document}
