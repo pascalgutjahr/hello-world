@@ -2,4 +2,9 @@
 *.log
 *.DS_Store
 *.pdf
-build/*
+*.toc
+build*
+*.bbl
+*.bcf
+*.blg
+*.run.xml
