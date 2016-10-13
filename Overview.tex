@@ -1,0 +1,171 @@
+\documentclass[titlepage=firstiscover]{scrartcl}
+\input{Head.tex}
+
+\begin{document}
+\title{Arbeiten mit \LaTeX}
+\author{Julian Jung}
+\maketitle
+\tableofcontents
+\newpage
+\section{Erste Schritte}
+\subsection{Was ist \LaTeX}
+\LaTeX ~ ist ein Textverarbeitungsprogramm, das uns in den kommenden
+Wochen und Semestern dabei hilft, wissenschaftliche Texte zu verfassen.
+\subsection{Basis Befehle}
+Damit \LaTeX ~funktioniert, wie es funktionieren soll, müssen bestimmte Befehle
+beherrscht werden. Die Befehle dieses Kapitels dienen Hauptsächlich der Formatierung
+von Texten und helfen den Code auf ein Minimum von Zeilen zu reduzieren. \\
+Jedes Dokument beginnt mit dem Befehl \textbf{\textbackslash documentclass\{...\}}
+in die geschweifte Klammer wird eingefügt um welche Dokumentenklasse es sich
+handelt. \\
+Es gibt folgende Dokumentklassen:
+\begin{itemize}
+  \item {scrartcl}
+  \begin{itemize}
+    \item für Artikel
+  \end{itemize}
+  \item {scrreprt}
+  \begin{itemize}
+    \item für Berichte
+  \end{itemize}
+  \item {scrbook}
+  \begin{itemize}
+    \item für Bücher
+  \end{itemize}
+\end{itemize}
+Die Dokumentenklasse steht stets \textbf{vor der Präambel}. Nachdem die Präambel
+abgeschlossen ist, muss in dem Code eine \textit{"Umgebung"} geöffnet werden.
+Da wir derzeit nur einfache Textdokumente betrachten, muss mit dem Befehl
+\fat{\textbackslash{begin}\{document\}}
+eine Umgebung kreiert werden.
+\fat{\textsc{Achtung}}: eine geöffnete Umgebung muss immer geschlossen werden.
+\subsubsection{Präambel}
+Nachdem die Dokumentenklasse festgelegt wurde folgt die \textbf{Präambel}.
+hier werden Einstellungen (z.B. Sprache) eingetragen, die das Dokument betreffen.
+Die Präambel ist auch der Ort, an dem neue Befehle eingefügt werden können.
+Neue Befehle werden mit \fat{\textbackslash newcommand\{...\}\{...\}} festgelegt.
+Die erste Klammer beinhaltet den Neuen Befehl, während die zweite
+Klammer festlegt, welcher Befehl ersetzt wird.
+\newpage
+\subsection{Textaufbau}
+Wissenschaftliche Texte, wie später eine Bachelor-, bzw. Masterarbeit, benötigen
+einen gut gegliederten Aufbau, ein Deckblatt und natürlich ein Inahltsverzeichnis. \\
+Folgende Befehle sind hilfreich um längere Texte gut zu gliedern.
+\begin{table}
+  \centering
+  \caption{Gliederung}
+  \label{tab:gld}
+  \begin{tabular}{l l}
+    \toprule
+    Input & Output
+    \\
+    \midrule
+    \textbackslash title  & Titel des Dokuments \\
+    \textbackslash author  & Autor des Dokuments \\
+    \textbackslash maketitle  & generiert einen Titel \\
+    \textbackslash tableofcontents  & erstellt ein Inhaltsverzeichnis \\
+    \textbackslash section &  beginnt einen neuen Abschnitt \\
+    \textbackslash subsection  & beginnt einen Unter-Abschnitt \\
+    \textbackslash sub...subsection  & sieht man doch \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+\\
+
+\newpage
+
+\section{\LaTeX und die Mathematik}
+\subsection{Voreinstellungen}
+Damit man mathematische Texte in \LaTeX verfassen kann, müssen zunächst die
+richtigen Pakete geladen sein (dies ist hier schon geschehen). \\
+Eine Matheumgebung wird mit \fat{\textbackslash begin\{equation\}} geöffnet. Diese
+dient Hauptsächlich zum Niederschreiben, da diese direkt nummeriert werden.
+alternativ können kürzere Mathe-Umgebungen mit \fat{\$} geöffnet und geschlossen werden.
+Dies ist vor allem dann hilfreich, wenn man Formel im Fließtext unterbringen will. \\
+Es folgt eine Tabelle mit einer groben Übersicht der Mathematischen Befehle.
+\subsection{Befehle}
+\begin{table}
+  \centering
+  \caption{Mathebefehle}
+  \label{tab:mat}
+  \begin{tabular}{l c c}
+    \toprule
+    Input & & Output in \$
+    \\
+    \midrule
+    \textbackslash frac\{a\}\{b\} & & $\frac{a}{b}$ \\
+    \\
+    \textbackslash sqrt\{25\} &  & $\sqrt{25}$ \\
+    \\
+    \textbackslash int\_\{a\}\^\{b\} & & $\int_{a}^{b}$ \\
+    \\
+    \textbackslash int\textbackslash limits\_\{a\}\^\{b\}
+    & & $\int\limits_{a}^{b}$ \\
+    \\
+    \textbackslash sum\_\{i=1\}\^\{N\} & & $\sum_{i=1}^{N}$ \\
+    \\
+    \textbackslash sum\textbackslash limits \_\{a\}\^\{b\}
+    & & $ \sum\limits_{i=1}^{N}$ \\
+    \\
+    \textbackslash prod \_\{i=1\}\^\{N\} & & $\prod_{i=1}^{N}$ \\
+    \\
+    \textbackslash lim\_\{x\textbackslash to\textbackslash infty\}
+    & & $\lim_{x\to\infty}$ \\
+    \\
+    \{n\textbackslash choose k\} & & ${n\choose k}$ \\
+    \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+\newpage
+Neben den wichtigen Befehlen für Matheoperationen, gibt es auch nützliche Befehle
+für Symbole und Sonderzeichen.
+\begin{table}
+  \centering
+  \caption{Symbole\& Sonderzeichen}
+  \label{tab:sym}
+  \begin{tabular}{l c c l c c}
+    \toprule
+    Input & & Output in \$ & Input & & Output in \$
+    \\
+    \midrule
+    \textbackslash pm & & $\pm$ & \textbackslash cap & & $\cap$ \\
+    \\
+    \textbackslash mp & & $\mp$ & \textbackslash cup & & $\cup$ \\
+    \\
+    \textbackslash cdot & & $\cdot$ &\textbackslash subset & & $\subset$ \\
+    \\
+    \textbackslash times & & $\times$ &\textbackslash supset & & $\supset$ \\
+    \\
+    \textbackslash cdots & & $\cdots$ &\textbackslash vee & & $\vee$ \\
+    \\
+    \textbackslash vdots & & $\vdots$ &\textbackslash wedge & & $\wedge$ \\
+    \\
+    \textbackslash ddots & & $\ddots$ &\textbackslash in & & $\in$ \\
+    \\
+    \textbackslash div & & $\div$ &\textbackslash notin & & $\notin$ \\
+    \\
+    \textbackslash not= & & $\not=$ &\textbackslash perp & & $\perp$ \\
+    \\
+    \textbackslash equiv & & $\equiv$ &\textbackslash parallel & & $\parallel$\\
+    \\
+    \textbackslash inftyr & & $\infty$ &\textbackslash forall & & $\forall$ \\
+    \\
+    \textbackslash partial & & $\partial$ &\textbackslash exists & & $\exists$ \\
+    \\
+    \textbackslash nabla & & $\nabla$ &\textbackslash Delta & & $\Delta$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+\\
+\\
+Während 'normale' Ableitungen wie etwa $y'$ normal in einer Matheumgebung
+eingegeben werden können, benötigt man für Ableitungen nach der Zeit
+den Befehl \fat{\textbackslash dot x}. Die Anzahl der 'd' gibt an, um die wie vielte
+Ableitung es sich handelt. So wird aus \textbackslash dddot z.B.:
+$\dddot x$ \\
+\section{Listen und Tabellen}
+\section{Einbinden von Grafiken}
+\section{Fußnoten}
+\section{Zusatz}
+\end{document}
