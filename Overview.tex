@@ -175,12 +175,50 @@ $\dddot x$ \\
   \label{tab:git}
     \begin{tabular} {c c}
       \toprule %wofür steht toprule und midrule???????
-      Input & & Output in \$ & Input & & Output in \$
+      Input & Output
       \\
       \midrule
-      \textbackslash git status & \textbachslash zeigt den aktuellen Satus an \\
+       git status & zeigt den aktuellen Satus an \\
+       git log & zeigt Commits an \\
+       git add <Datei> & added Datei lokal \\
+       git commit -m 'Kommentar' & Kommentar zur Änderung \\
+       git pull / push & Up-/ Downdload auf/ von Github \\
+       gti rm <Datei> & löscht eine Datei aus Github \\
+       git merge master & master branch wird auf den eigenen branch übertragen \\
+       git show & zeigt die Änderungen des letzten Commits \\
       \bottomrule
     \end{tabular}
+  \end{table}
+
+  \newpage
+
+  \section{Unix-Befehle}
+  \begin{table}
+    \centering
+    \caption{Unix}
+    \label{tab:unix}
+      \begin{tabular} {c c}
+        \toprule
+        Input & Output
+        \\
+        \midrule
+        cd & wechselt den Pfad \\
+        pwd & zeigt den aktuellen Pfad an \\
+        ls & zeigt die aktuellen Dateien an \\
+        ls -l & zeigt mehr Informationen über Dateien und Verzeichnisse an \\
+        ls -a & zeigt versteckte Dateien an \\
+        mkdir <name> & erstellt ein Verzeichnis \\
+        touch <name> & erstellt ein Datei \\
+        mv <Datei> <Zielpfad> & verschiebt eine Datei \\
+        rm & löscht eine Datei \\
+        rm -r & löscht ein Verzeichnis \\
+        rmdir & löscht ein leeres Verzeichnis \\
+        cat <Datei> & gibt Inhalt einer Datei aus \\
+        ctrl + C & beendet laufendes Programm \\
+        ctrl + D & kann laufende Programme beenden \\
+        ctrl + L & leert den Bildschirm (Terminal) \\
+        \bottomrule
+      \end{tabular}
   \end{table}
 
 \section{Zusatz}
