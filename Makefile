@@ -3,7 +3,8 @@ all: build/mathepascal.pdf /
 	 	build/ptable.pdf /
 	 	build/biblatex.pdf /
 	 	build/footnote.pdf /
-	 	build/references.pdf
+	 	build/references.pdf /
+		build/Overview.pdf
 #der Befehl --output-directory=build sorgt dafür, dass die Dateien im build Ordner landen
 #mit rm -rf build werden die Dateien somit direkt wieder gelöscht, wenn man sich die Dateien
 #jedoch anzeigen lassen möchte, so muss man den output Befehl einfach weglassen
@@ -28,6 +29,10 @@ build/footnote.pdf: footnote.tex | build
 
 build/references.pdf: references.tex | build
 	lualatex --output-directory=build references.tex
+
+build/Overview.pdf: Overview.tex | build
+	lualatex --output-directory=build Overview.tex
+	lualatex --output-directory=build Overview.tex
 
 build:
 	mkdir -p build
